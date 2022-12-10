@@ -1,0 +1,44 @@
+// Флексы
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+// Hover
+@mixin hover($hoverColor,$hoverBg) {
+  &:hover{
+    color: $hoverColor;
+    background: $hoverBg;
+  }
+}
+// Центрирование флексами
+@mixin flexCenter(){
+  @include flexbox();
+  justify-content: center;
+  align-items: center;
+}
+// Title
+@mixin title(){ 
+  .wrapper__title{
+    @include flexCenter();
+    width: 50%;
+    position: relative;
+    margin: 0 0 100px 0;
+    .title-line{
+      width: 100%;
+      height: 2px;
+      background-color: $gold;
+    }
+    .title-text{
+      padding: 0 20px;
+      font-family: $sectionFont;
+      font-size: $titleFz;
+      color: $gold;
+      background: #000;
+      position: absolute;
+      z-index: 2;
+    }
+  }
+}

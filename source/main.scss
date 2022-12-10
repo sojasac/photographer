@@ -1,0 +1,130 @@
+.landing-body{
+  width: 100%;
+  margin: -70px 0 0 0;
+  height: 100%;
+}
+.wrapper{
+  width: 100%;
+  font-family: $mainFont;
+  font-size: $mainFz;
+  background: #000;
+}
+// Hero
+.hero-wrapper{
+  width: 100%;
+  background: url(../img/sectionIMg/heroBG.png);
+  height: 910px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 250px 0 0 80px;
+}
+.hero-content{
+  width: 28%;
+  @include flexbox();
+  flex-direction: column;
+  align-items: start;
+  color: #fff;
+}
+.hero-title{
+  font-family: $sectionFont;
+  font-size: 60px;
+  line-height: 120px;
+  margin: 0 0 10px 0;
+}
+.hero-text{
+  line-height: 40px;
+  margin: 0 0 25px 0;
+}
+.hero-btn{
+  @include flexCenter();
+  width: 220px;
+  height: 55px;
+  background: $gold;
+  color: #000;
+  font-size: $mainFz;
+  @include hover(#fff, $gold);
+}
+// Skills
+.skills-wrapper{
+  @extend .header;
+  margin: 100px 0 0 0;
+  height: auto;
+  color: #fff;
+  padding: 0 0 10px 0;
+  flex-direction: column;
+  @include title();
+}
+.skills-content{
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 80px;
+  padding: 0 40px;
+  .skills-items{
+    @include flexCenter();
+    flex-direction: column;
+    text-align: center;
+    line-height: 40px;
+    width: 280px;
+    & img{
+      margin-bottom: 50px;
+    }
+    .items-title{
+      font-family: $mainFontBold;
+    }
+    .items-text{
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+}
+// Portfolio
+.portfolio-wrapper{
+  @extend .skills-wrapper;
+}
+.portfolio-inner{
+  width: 100%;
+  @include flexCenter();
+  flex-direction: column;
+  padding: 0 20px;
+}
+.portfolio-content{
+  width: 62%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 5px;
+  margin: 0 0 60px 0;
+  .portfolio-btn{
+    @extend .hero-btn;
+    width: 100%;
+    background: transparent;
+    border: 1px solid $gold;
+    color: $gold;
+    @include hover(#fff, transparent);
+    &__active{
+      background: $gold;
+      color: #000;
+    }
+    &:active{
+      background: $gold;
+      color: #000;
+    }
+  }
+}
+.portfolio-images{
+  width: 100%;
+   display: grid;
+   grid-template-rows: repeat(2, 1fr);
+   grid-template-columns: repeat(3, 1fr);
+   gap: 25px;
+}
+.portfolio-items{
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+

@@ -1,0 +1,49 @@
+// Header
+.header{
+  @include flexCenter();
+  margin: 20px 20px 0 20px;
+  max-width: 100%;
+  background: transparent;
+  height: 50px;
+}
+.header-inner{
+  width: 100%;
+  @include flexbox();
+  justify-content: space-between;
+  .header-logo{
+    .header-logo__svg{
+      fill: white;
+      &:hover{
+        fill: $gold;
+      }
+    }
+  }
+}
+.header-navigation{
+  @extend .header;
+  width: 39%;
+  margin: 0;
+  .navigation{
+    @extend .header-inner;
+    gap: 20px;
+    .navigation-items{
+      width: calc(100% / 6 - 20px);
+      text-align: center;
+      .navigation-link{
+        font-family: $mainFont, sans-serif;
+        font-size: $mainFz;
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+          @include hover($gold, transparent)
+        }
+      }
+    }
+  }
+}
+.switch-lng__text{
+  @extend .navigation-link;
+  &:hover{
+    @include hover(#fff !important, transparent)
+  }
+}
