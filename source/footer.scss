@@ -1,0 +1,23 @@
+// FOOTER
+.footer{
+  height: 150px;
+  @extend .wrapper;
+  padding: 0 20px;
+  @include flexCenter();
+}
+.footer-inner{
+  @include flexbox();
+  justify-content: space-between;
+  width: 100%;
+}
+.footer-social{
+  @include flexbox();
+  justify-content: space-between;
+  gap: 30px;
+  .social-links{
+  font-size: 25px;
+  color: #fff;
+  @include hover($gold, transparent);
+  }
+
+}
