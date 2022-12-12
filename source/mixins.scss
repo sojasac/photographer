@@ -8,7 +8,7 @@
 }
 // Hover
 @mixin hover($hoverColor,$hoverBg) {
-  &:hover{
+  &:hover:not(.portfolio-btn__active, .video-play){
     color: $hoverColor;
     background: $hoverBg;
   }

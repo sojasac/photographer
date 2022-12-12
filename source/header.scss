@@ -1,43 +1,42 @@
 // Header
 .header{
   @include flexCenter();
-  margin: 20px 20px 0 20px;
+  margin: 20px 20px 0;
   max-width: 100%;
   background: transparent;
   height: 50px;
-}
-.header-inner{
-  width: 100%;
-  @include flexbox();
-  justify-content: space-between;
-  .header-logo{
-    .header-logo__svg{
-      fill: white;
-      &:hover{
-        fill: $gold;
+  &-inner{
+    width: 100%;
+    @include flexbox();
+    justify-content: space-between;
+    .header-logo{
+      .header-logo__svg{
+        fill: #fff;
+        &:hover{
+          fill: $gold;
+        }
       }
     }
   }
-}
-.header-navigation{
-  @extend .header;
-  width: 39%;
-  margin: 0;
-  .navigation{
-    @extend .header-inner;
-    gap: 20px;
-    .navigation-items{
-      width: calc(100% / 6);
-      text-align: center;
-      .navigation-link{
-        font-family: $mainFont, sans-serif;
-        font-size: $mainFz;
-        color: #fff;
-        text-decoration: none;
-        &:hover{
-          @include hover($gold, transparent)
-        }
+  // Навигация
+  &-navigation{
+    @extend .header;
+    width: 39%;
+    margin: 0;
+    .navigation{
+      @extend .header-inner;
+      gap: 20px;
+      &-items{
+        width: calc(100% / 6);
+        text-align: center;
       }
+      &-link{
+          color: #fff;
+          text-decoration: none;
+          &:hover{
+            @include hover($gold, transparent)
+          }
+        }
     }
   }
 }

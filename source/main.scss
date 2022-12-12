@@ -5,10 +5,7 @@
 }
 .wrapper{
   width: 100%;
-  font-family: $mainFont;
-  font-size: $mainFz;
   background: #000;
-  color: #fff;
 }
 // Hero
 .hero-wrapper{
@@ -20,11 +17,10 @@
   padding: 250px 0 0 80px;
 }
 .hero-content{
-  width: 28%;
   @include flexbox();
+  width: 28%;
   flex-direction: column;
   align-items: start;
-  color: #fff;
 }
 .hero-title{
   font-family: $sectionFont;
@@ -36,25 +32,8 @@
   line-height: 40px;
   margin: 0 0 25px 0;
 }
-.hero-btn{
-  @include flexCenter();
-  width: 220px;
-  height: 55px;
-  background: $gold;
-  color: #000;
-  font-size: $mainFz;
-  @include hover(#fff, $gold);
-}
+
 // Skills
-.skills-wrapper{
-  @extend .header;
-  margin: 100px 0 0 0;
-  height: auto;
-  color: #fff;
-  padding: 0 0 10px 0;
-  flex-direction: column;
-  @include title();
-}
 .skills-content{
   width: 100%;
   @include flexbox();
@@ -79,9 +58,6 @@
   }
 }
 // Portfolio
-.portfolio-wrapper{
-  @extend .skills-wrapper;
-}
 .portfolio-inner{
   width: 100%;
   @include flexCenter();
@@ -96,7 +72,6 @@
   gap: 5px;
   margin: 0 0 60px 0;
   .portfolio-btn{
-    @extend .hero-btn;
     width: 100%;
     background: transparent;
     border: 1px solid $gold;
@@ -126,9 +101,6 @@
   }
 }
 // Video
-.video-wrapper{
-  @extend .skills-wrapper;
-}
 .video-inner{
   @extend .portfolio-inner;
   position: relative;
@@ -148,9 +120,6 @@
   }
 }
 // Price
-.price-wrapper{
-  @extend .skills-wrapper;
-}
 .price-inner{
   @extend .portfolio-inner;
 }
@@ -164,27 +133,23 @@
   text-align: center;
   border: 3px solid $gold;
   padding: 45px 0;
-}
-.price-items__title{
-  font-family: $sectionFont;
-  font-size: 28px;
-  line-height: 56px;
-  padding: 0 0 20px 0;
-}
-.price-items__price{
-  @extend .price-items__title;
-  color: $gold;
-  font-size: 24px;
-  line-height: 48px;
-}
-.price-items__list{
-  font-family: $mainFont;
-  font-size: 18px;
-  line-height: 36px;
-  padding: 0 0 40px 0;
-}
-.price-items__btn{
-  @extend .hero-btn;
+  &__title{
+    font-family: $sectionFont;
+    font-size: 28px;
+    line-height: 56px;
+    padding: 0 0 20px 0;
+  }
+  &__price{
+    @extend .price-items__title;
+    color: $gold;
+    font-size: 24px;
+    line-height: 48px;
+  }
+  &__list{
+    font-size: 18px;
+    line-height: 36px;
+    padding: 0 0 40px 0;
+  }
 }
 // Contact
 .contact-wrapper{
@@ -224,10 +189,7 @@
   textarea{
     margin: 0 0 30px 0;
   }
-  input::placeholder, textarea::placeholder{
+  *::placeholder{
     color: $gold;
-  }
-  .form-btn{
-    @extend .hero-btn
   }
 }
