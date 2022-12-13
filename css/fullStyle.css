@@ -143,9 +143,19 @@ body {
   background: transparent;
 }
 
-.switch-lng__text:hover:hover:not(.portfolio-btn__active, .video-play) {
+.switch-lng__text:hover:not(.portfolio-btn__active, .video-play) {
   color: #fff !important;
   background: transparent;
+}
+
+.landing-body {
+  width: 100%;
+  margin: -70px 0 0 0;
+}
+
+.wrapper, .footer {
+  width: 100%;
+  background: #000;
 }
 
 button {
@@ -205,17 +215,6 @@ button:hover:not(.portfolio-btn__active, .video-play) {
   background: #000;
   position: absolute;
   z-index: 2;
-}
-
-.landing-body {
-  width: 100%;
-  margin: -70px 0 0 0;
-  height: auto;
-}
-
-.wrapper, .footer {
-  width: 100%;
-  background: #000;
 }
 
 .hero-wrapper {
@@ -473,7 +472,7 @@ button:hover:not(.portfolio-btn__active, .video-play) {
   margin: 100px 0 0 0;
   background: url(../img/sectionIMg/contacts.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   height: 100vh;
   -webkit-box-align: end;
       -ms-flex-align: end;

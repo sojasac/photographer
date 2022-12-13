@@ -19,34 +19,8 @@
 // Header
   @import 'header.scss';
 
-
-
 // Main
-  // All buttons
-  button{
-    @include flexCenter();
-    width: 220px;
-    height: 55px;
-    background: $gold;
-    font-size: $mainFz;
-    color: #000;
-    @include hover(#fff, $gold);
-  }
-  // Skills, Portfolio, Video and Price wrappers
-  .skills-wrapper, .portfolio-wrapper, .video-wrapper, .price-wrapper{
-    @extend .header;
-    margin: 100px 0 0 0;
-    height: auto;
-    padding: 0 0 10px 0;
-    flex-direction: column;
-    @include title();
-  }
-
-  // Main import
   @import 'main.scss';
-
-
-
 
 // Footer
   @import 'footer.scss';

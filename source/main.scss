@@ -1,12 +1,30 @@
 .landing-body{
   width: 100%;
   margin: -70px 0 0 0;
-  height: auto;
 }
 .wrapper{
   width: 100%;
   background: #000;
 }
+// All buttons
+  button{
+    @include flexCenter();
+    width: 220px;
+    height: 55px;
+    background: $gold;
+    font-size: $mainFz;
+    color: #000;
+    @include hover(#fff, $gold);
+  }
+  // Skills, Portfolio, Video and Price wrappers
+  .skills-wrapper, .portfolio-wrapper, .video-wrapper, .price-wrapper{
+    @extend .header;
+    margin: 100px 0 0 0;
+    height: auto;
+    padding: 0 0 10px 0;
+    flex-direction: column;
+    @include title();
+  }
 // Hero
 .hero-wrapper{
   width: 100%;
@@ -156,7 +174,7 @@
   margin: 100px 0 0 0;
   background: url(../img/sectionIMg/contacts.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   height: 100vh;
   @extend .portfolio-inner;
   align-items: end;

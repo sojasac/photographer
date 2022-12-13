@@ -42,7 +42,5 @@
 }
 .switch-lng__text{
   @extend .navigation-link;
-  &:hover{
-    @include hover(#fff !important, transparent)
-  }
+  @include hover(#fff !important, transparent)
 }
