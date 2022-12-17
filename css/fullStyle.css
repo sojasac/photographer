@@ -234,6 +234,11 @@ button:hover:not(.portfolio-btn__active, .video-play) {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 0 0 80px;
+  background: url(../img/sectionIMg/heroBG.png);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 250px 0 0 80px;
 }
 
 .hero-content {
@@ -562,6 +567,10 @@ button:hover:not(.portfolio-btn__active, .video-play) {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
   }
+  .skills-content .skills-items {
+    border-bottom: 2px solid #BDAE82;
+    padding: 0 0 10px 0;
+  }
   .contactMe input, .contactMe textarea {
     background: rgba(0, 0, 0, 0.5);
   }
@@ -621,6 +630,9 @@ button:hover:not(.portfolio-btn__active, .video-play) {
     display: block;
     margin-right: 20px;
   }
+  .hero-wrapper {
+    background: url(../img/sectionIMg/smallHeroBg.png) 0 0%/100% 100% no-repeat;
+  }
   .skills-wrapper .wrapper__title, .portfolio-wrapper .wrapper__title, .video-wrapper .wrapper__title, .price-wrapper .wrapper__title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -671,6 +683,10 @@ button:hover:not(.portfolio-btn__active, .video-play) {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .video-play svg {
+    width: 65px;
+    height: 65px;
+  }
   .price-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -697,6 +713,25 @@ button:hover:not(.portfolio-btn__active, .video-play) {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .hero-wrapper {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero-content {
+    width: 70%;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .portfolio-images, .price-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -707,5 +742,29 @@ button:hover:not(.portfolio-btn__active, .video-play) {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .footer-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .price-items__btn {
+    width: 90%;
+  }
+  .contact-inner {
+    width: 100%;
   }
 }
