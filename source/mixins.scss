@@ -20,7 +20,7 @@
   align-items: center;
 }
 // Title
-@mixin title(){ 
+@mixin title($mr){ 
   .wrapper__title{
     @include flexCenter();
     width: 50%;
@@ -34,11 +34,17 @@
     .title-text{
       padding: 0 20px;
       font-family: $sectionFont;
-      font-size: $titleFz;
+      font-size: $mr;
       color: $gold;
       background: #000;
       position: absolute;
       z-index: 2;
     }
   }
+}
+// Media wrap
+@mixin mediaWrap{
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
 }

@@ -1,0 +1,186 @@
+// Миксины
+@import 'mixins.scss';
+// Переменные
+@import 'variable.scss';
+
+// 1440px
+@media only screen and (max-width: 1400px) {
+  // Header
+  .header-navigation{
+    width: 60%;
+  }
+}
+// 1200px
+@media only screen and (max-width: 1200px){
+  // Hero
+  .hero-content{
+    width: 50%;
+  }
+  // Skills
+  .skills-content{
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 0;
+    .skills-items{
+      border-bottom: 2px solid $gold;
+      padding: 0 0 10px 0;
+    }
+  }
+  // Contact
+  .contactMe{
+    input, textarea{
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+// 992px
+@media only screen and (max-width: 992px){
+  // Header
+  .header-navigation{
+    width: 70%;
+  }
+  // Hero
+  .hero-wrapper{
+    background: url(../img/sectionIMg/smallHeroBg.png) 0% 0%/ cover no-repeat;
+    height: 590px;
+  }
+  .hero-content{
+    width: 53%;
+  }
+  .hero-title{
+    font-size: 32px;
+    line-height: 64px;
+    margin: 0 0 20px 0;
+  }
+  .hero-text{
+    line-height: 24px;
+    margin: 0 0 60px 0;
+  }
+  
+  // Contact
+  .contact-wrapper{
+    background: url(../img/sectionIMg/smallContactBg.png) -300px 0%/ cover no-repeat;
+    align-items: center;
+  }
+  .contact-inner{
+    width: 60%;
+  }
+  .contactMe{
+    align-items: center;
+    input, textarea{
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+// 768px
+@media only screen and (max-width: 768px){
+  // Header
+  .header-navigation{
+    width: 40%;
+    padding: 0 65px 0 0;
+    .navigation{
+      justify-content: center;
+      &-items{
+        display: none;
+      }
+      &-burger, .switch-lng{
+        display: block;
+        margin-right: 20px
+      }
+    }
+  }
+  // Hero
+  .hero-wrapper{
+    background: url(../img/sectionIMg/smallHeroBg.png) 0 0%/ 100% 100% no-repeat;
+  }
+  // Skills, Portfolio, Video and Price wrappers
+  .skills-wrapper, .portfolio-wrapper, .video-wrapper, .price-wrapper{
+     @include title($titleFzmedia);
+  }
+  // Skills, portfolio, price contents
+  .skills-content, .portfolio-content, .price-content{
+    @include mediaWrap();
+  }
+  // Skills
+  .skills-content{
+    @include flexbox();
+  }
+  // Portfolio
+  .portfolio-content{
+    width: 70%;
+    @include mediaWrap();
+  }
+  // Video
+  .video-play{
+  svg{
+    width: 65px;
+    height: 65px;
+  }
+}
+  // Price
+  .price-content{
+    @include flexbox();
+    width: 70%;
+  }
+  .price-items{
+    width: 100%;
+  }
+  // Contact
+   .contactMe{
+    .form-title{
+      font-size: $titleFzmedia;
+      line-height: 64px;
+      margin: 0 0 80px 0;
+    }
+   }
+}
+// 600px
+@media only screen and (max-width: 600px){
+  // Header
+  .header-navigation{
+    padding: 0;
+    width: 50%;
+    .navigation{
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  // Hero
+  .hero-wrapper{
+    padding: 0;
+    @include flexCenter();
+  }
+  .hero-content{
+    width: 70%;
+    text-align: center;
+    align-items: center;
+  }
+  // Portfolio
+  .portfolio-images{
+    @include flexbox();
+    @include mediaWrap;
+  }
+  // Footer
+  .footer-inner{
+    @include flexCenter();
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+// 370px
+@media only screen and (max-width: 370px){
+  // Price
+  .price-items{
+    &__btn{
+      width: 90%;
+    }
+  }
+  // Contact
+  .contact-inner{
+    width: 100%;
+  }
+}

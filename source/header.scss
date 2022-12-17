@@ -33,10 +33,14 @@
       &-link{
           color: #fff;
           text-decoration: none;
+          @include flexbox();
           &:hover{
             @include hover($gold, transparent)
           }
-        }
+      }
+      &-burger{
+        display: none;
+      }
     }
   }
 }
