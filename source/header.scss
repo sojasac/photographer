@@ -9,11 +9,13 @@
     width: 100%;
     @include flexbox();
     justify-content: space-between;
+    align-items: center;
     .header-logo{
-      .header-logo__svg{
-        fill: #fff;
-        &:hover{
-          fill: $gold;
+      cursor: pointer;
+      .icon-logoSmall{
+        font-size: 50px;
+        &:hover::before{
+          color: $gold;
         }
       }
     }
@@ -38,9 +40,12 @@
             @include hover($gold, transparent)
           }
       }
-      &-burger{
-        display: none;
-      }
+    }
+    .switch-lng{
+      margin:  0 0 0 20px;
+    }
+    .navigation-burger{
+      display: none;
     }
   }
 }

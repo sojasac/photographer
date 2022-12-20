@@ -134,11 +134,10 @@
 .video-play{
   position: absolute;
   background: transparent;
-  svg{
-    width: 130px;
-    height: 130px;
-    &:hover{
-      fill: $gold;
+  .icon-Play_button{
+    font-size: 130px;
+    &:hover:before{
+      color: $gold;
     }
   }
 }

@@ -45,7 +45,7 @@
   }
   // Hero
   .hero-wrapper{
-    background: url(../img/sectionIMg/smallHeroBg.png) 0% 0%/ cover no-repeat;
+    background: url(../img/sectionIMg/smallHeroBg.png) 0% 0%/ 100% 100% no-repeat;
     height: 590px;
   }
   .hero-content{
@@ -79,20 +79,83 @@
 // 768px
 @media only screen and (max-width: 768px){
   // Header
+  .header-inner{
+    position: relative;
+  }
   .header-navigation{
-    width: 40%;
+    width: 90%;
+    justify-content: flex-end;
     padding: 0 65px 0 0;
     .navigation{
-      justify-content: center;
-      &-items{
-        display: none;
+      padding: 135px 0 0 10%;
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 100%;
+      background: rgba($color: #000000, $alpha: 0.9);
+      color: #fff;
+      transition: right 0.3s ease 0s;
+      right: -100%;
+      .navigation-items{
+        font-size: 35px;
+        line-height: 75px;
+        margin: 0 0 15px 0;
+        &:last-child{
+          margin: 0;
+        }
       }
-      &-burger, .switch-lng{
-        display: block;
-        margin-right: 20px
+      &__active{
+        right: 0;
       }
     }
   }
+  .navigation-burger{
+    position: relative;
+  }
+  .burger__icon{
+      z-index: 5;
+      display: block;
+      position: relative;
+      right: 0;
+      width: 50px;
+      height: 28px;
+      cursor: pointer;
+      &::before, &::after, & span{
+      left: 0;
+      position: absolute;
+      height: 10%;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      background-color: #fff;
+      }
+      &::before, &::after{
+        content: "";
+
+      }
+      &::before{
+        top: 0;
+      }
+      &::after{
+        bottom: 0;
+      }
+      & span{
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+      }
+      &-active span{
+        transform: scale(0) translate(0px, -50%);
+      }
+      &-active::before{
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+      }
+      &-active::after{
+        top: 50%;
+        transform: rotate(-135deg) translate(0px, -50%);
+      }
+    }
   // Hero
   .hero-wrapper{
     background: url(../img/sectionIMg/smallHeroBg.png) 0 0%/ 100% 100% no-repeat;
