@@ -13,6 +13,9 @@
 // 1200px
 @media only screen and (max-width: 1200px){
   // Hero
+  .hero-wrapper{
+    background: url(../img/sectionIMg/smallHeroBg.png) 0% 0%/ 100% 100% no-repeat;
+  }
   .hero-content{
     width: 50%;
   }
@@ -45,7 +48,6 @@
   }
   // Hero
   .hero-wrapper{
-    background: url(../img/sectionIMg/smallHeroBg.png) 0% 0%/ 100% 100% no-repeat;
     height: 590px;
   }
   .hero-content{
@@ -63,8 +65,13 @@
   
   // Contact
   .contact-wrapper{
-    background: url(../img/sectionIMg/smallContactBg.png) -300px 0%/ cover no-repeat;
+    background: url(../img/sectionIMg/smallContactBg.png) no-repeat;
+    background-size: fill;
+    background-position: -300px 0;
     align-items: center;
+    justify-content: start;
+    height: auto;
+    padding: 60px 0 90px 0;
   }
   .contact-inner{
     width: 60%;
@@ -158,7 +165,7 @@
     }
   // Hero
   .hero-wrapper{
-    background: url(../img/sectionIMg/smallHeroBg.png) 0 0%/ 100% 100% no-repeat;
+    background: url(../img/sectionIMg/smallHeroBg.png) 0 0%/100% 100% no-repeat;
   }
   // Skills, Portfolio, Video and Price wrappers
   .skills-wrapper, .portfolio-wrapper, .video-wrapper, .price-wrapper{
@@ -179,9 +186,8 @@
   }
   // Video
   .video-play{
-  svg{
-    width: 65px;
-    height: 65px;
+  .icon-Play_button{
+    font-size: 65px;
   }
 }
   // Price
@@ -197,7 +203,6 @@
     .form-title{
       font-size: $titleFzmedia;
       line-height: 64px;
-      margin: 0 0 80px 0;
     }
    }
 }

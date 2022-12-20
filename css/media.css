@@ -4,6 +4,9 @@
   }
 }
 @media only screen and (max-width: 1200px) {
+  .hero-wrapper {
+    background: url(../img/sectionIMg/smallHeroBg.png) 0% 0%/100% 100% no-repeat;
+  }
   .hero-content {
     width: 50%;
   }
@@ -52,7 +55,6 @@
     width: 70%;
   }
   .hero-wrapper {
-    background: url(../img/sectionIMg/smallHeroBg.png) 0% 0%/100% 100% no-repeat;
     height: 590px;
   }
   .hero-content {
@@ -68,10 +70,17 @@
     margin: 0 0 60px 0;
   }
   .contact-wrapper {
-    background: url(../img/sectionIMg/smallContactBg.png) -300px 0%/cover no-repeat;
+    background: url(../img/sectionIMg/smallContactBg.png) no-repeat;
+    background-size: fill;
+    background-position: -300px 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    height: auto;
+    padding: 60px 0 90px 0;
   }
   .contact-inner {
     width: 60%;
@@ -223,9 +232,8 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .video-play svg {
-    width: 65px;
-    height: 65px;
+  .video-play .icon-Play_button {
+    font-size: 65px;
   }
   .price-content {
     display: -webkit-box;
@@ -239,7 +247,6 @@
   .contactMe .form-title {
     font-size: 32px;
     line-height: 64px;
-    margin: 0 0 80px 0;
   }
 }
 @media only screen and (max-width: 600px) {
