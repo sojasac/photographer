@@ -195,7 +195,7 @@ body.__lock {
 .header-navigation .switch-lng {
   margin: 0 0 0 20px;
 }
-.header-navigation .navigation-burger {
+.header .navigation-burger, .skills-wrapper .navigation-burger, .portfolio-wrapper .navigation-burger, .video-wrapper .navigation-burger, .price-wrapper .navigation-burger, .header-navigation .navigation-burger {
   display: none;
 }
 
@@ -275,7 +275,7 @@ button:hover:not(.portfolio-btn__active, .video-play) {
 
 .hero-wrapper {
   width: 100%;
-  background: url(../img/sectionIMg/heroBG.png) 0% 0%/cover no-repeat;
+  background: url(../img/sectionIMg/heroBG.png) center/cover no-repeat;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -511,7 +511,7 @@ button:hover:not(.portfolio-btn__active, .video-play) {
   background: transparent;
   border: 2px solid #BDAE82;
   width: 100%;
-  padding: 0 0 0 20px;
+  padding: 0 20px;
   color: #BDAE82;
   line-height: 40px;
 }

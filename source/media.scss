@@ -13,9 +13,9 @@
 // 1200px
 @media only screen and (max-width: 1200px){
   // Hero
-  .hero-wrapper{
-    background: url(../img/sectionIMg/smallHeroBg.png) 0% 0%/ 100% 100% no-repeat;
-  }
+  // .hero-wrapper{
+  //   background: url(../img/sectionIMg/smallHeroBg.png) 0% 0%/ 100% 100% no-repeat;
+  // }
   .hero-content{
     width: 50%;
   }
@@ -118,8 +118,11 @@
       }
     }
   }
-  .navigation-burger{
-    position: relative;
+  .header{
+    .navigation-burger{
+      position: relative;
+      display: block;
+    }
   }
   .burger__icon{
       z-index: 5;
@@ -159,14 +162,14 @@
         transform: rotate(-45deg) translate(0px, -50%);
       }
       &-active::after{
-        top: 50%;
+        top: 47%;
         transform: rotate(-135deg) translate(0px, -50%);
       }
     }
   // Hero
-  .hero-wrapper{
-    background: url(../img/sectionIMg/smallHeroBg.png) 0 0%/100% 100% no-repeat;
-  }
+  // .hero-wrapper{
+  //   background: url(../img/sectionIMg/smallHeroBg.png) 0 0%/100% 100% no-repeat;
+  // }
   // Skills, Portfolio, Video and Price wrappers
   .skills-wrapper, .portfolio-wrapper, .video-wrapper, .price-wrapper{
      @include title($titleFzmedia);

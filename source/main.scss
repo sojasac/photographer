@@ -28,7 +28,7 @@
 // Hero
 .hero-wrapper{
   width: 100%;
-  background: url(../img/sectionIMg/heroBG.png) 0% 0%/cover no-repeat;
+  background: url(../img/sectionIMg/heroBG.png) center/cover no-repeat;
   height: 100vh;
   @include flexbox();
   flex-direction: column;
@@ -195,7 +195,7 @@
     background: transparent;
     border: 2px solid $gold;
     width: 100%;
-    padding: 0 0 0 20px;
+    padding: 0 20px;
     color: $gold;
     line-height: 40px;
   }
